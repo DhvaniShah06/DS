@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node *enterElement(struct node *list);
 void display(void *list, void *list2);
+
 struct node
 {
     int info;
