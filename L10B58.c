@@ -30,7 +30,6 @@ int main()
             printf("Exiting ....");
             return 0;
         case 4:
-            printf("\nList 1: \n");
             display(first, begin);
             break;
         }
@@ -69,7 +68,7 @@ void display(void *list, void *list2)
     struct node *temp = (struct node *)list;
     struct node *comp = (struct node *)list2;
 
-    while (temp != NULL)
+    while (temp != NULL && comp !=NULL)
     {
         if (temp->info != comp->info)
         {
@@ -78,16 +77,16 @@ void display(void *list, void *list2)
         }
         temp = temp->link;
         comp = comp->link;
-    }
-    if (comp->link == NULL)
-    {
-        flag = 0;
-    }
-    else
+    } 
+    if (comp == NULL && temp == NULL)
     {
         flag = 1;
     }
-    if (flag = 0)
+    else
+    {
+        flag = 0;
+    }
+    if (flag == 0)
     {
         printf("Lists Are Not Same\n");
     }
