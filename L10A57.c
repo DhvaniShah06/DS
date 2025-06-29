@@ -118,6 +118,7 @@ void deleteElement(int x)
     if (x != save->info)
     {
         printf("Element To Delete is not in List\n");
+        return;
     }
     else
     {
